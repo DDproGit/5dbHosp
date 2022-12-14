@@ -38,5 +38,16 @@ namespace _5dbHosp
             formShow.ShowDialog();
             conn.Close();
         }
+
+        private void loginAdmin_Click(object sender, EventArgs e)
+        {
+            connection conn = new connection();
+            if (conn.Open(nameAdmin.Text, passAdmin.Text) == false)
+                return;
+            FormAdmin formShow = new FormAdmin();
+            formShow.connectionAdmin = conn.conn;
+            formShow.ShowDialog();
+            conn.Close();
+        }
     }
 }

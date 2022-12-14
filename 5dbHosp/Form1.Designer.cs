@@ -41,6 +41,12 @@ namespace _5dbHosp
             this.passPatient = new System.Windows.Forms.TextBox();
             this.loginDoc = new System.Windows.Forms.Button();
             this.loginPatient = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.nameAdmin = new System.Windows.Forms.TextBox();
+            this.passAdmin = new System.Windows.Forms.TextBox();
+            this.loginAdmin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -145,11 +151,68 @@ namespace _5dbHosp
             this.loginPatient.UseVisualStyleBackColor = true;
             this.loginPatient.Click += new System.EventHandler(this.loginPatient_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(257, 334);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(181, 13);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Авторизация для администратора";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(260, 409);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Password";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(257, 362);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 13);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Username";
+            // 
+            // nameAdmin
+            // 
+            this.nameAdmin.Location = new System.Drawing.Point(375, 362);
+            this.nameAdmin.Name = "nameAdmin";
+            this.nameAdmin.Size = new System.Drawing.Size(100, 20);
+            this.nameAdmin.TabIndex = 15;
+            // 
+            // passAdmin
+            // 
+            this.passAdmin.Location = new System.Drawing.Point(375, 409);
+            this.passAdmin.Name = "passAdmin";
+            this.passAdmin.Size = new System.Drawing.Size(100, 20);
+            this.passAdmin.TabIndex = 16;
+            // 
+            // loginAdmin
+            // 
+            this.loginAdmin.Location = new System.Drawing.Point(325, 471);
+            this.loginAdmin.Name = "loginAdmin";
+            this.loginAdmin.Size = new System.Drawing.Size(75, 23);
+            this.loginAdmin.TabIndex = 17;
+            this.loginAdmin.Text = "Login";
+            this.loginAdmin.UseVisualStyleBackColor = true;
+            this.loginAdmin.Click += new System.EventHandler(this.loginAdmin_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 571);
+            this.Controls.Add(this.loginAdmin);
+            this.Controls.Add(this.passAdmin);
+            this.Controls.Add(this.nameAdmin);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.loginPatient);
             this.Controls.Add(this.loginDoc);
             this.Controls.Add(this.passPatient);
@@ -183,6 +246,12 @@ namespace _5dbHosp
         private System.Windows.Forms.TextBox passPatient;
         private System.Windows.Forms.Button loginDoc;
         private System.Windows.Forms.Button loginPatient;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox nameAdmin;
+        private System.Windows.Forms.TextBox passAdmin;
+        private System.Windows.Forms.Button loginAdmin;
     }
 }
 

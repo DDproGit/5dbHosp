@@ -30,5 +30,22 @@ namespace _5dbHosp
             adp.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+        public int idToChange;
+        public string diagTochange;
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateDoc frm = new UpdateDoc(this);
+            frm.ShowDialog();
+            idToChange = ((int)frm.idPatient.Value);
+            diagTochange = frm.diagnosisPatient.Text;
+            SqlCommand cmd0 = new SqlCommand("update patients_doctors set diagnosis = '" + diagTochange + "' where id = " + idToChange.ToString(), connectionDoc);
+            cmd0.ExecuteNonQuery();
+
+            SqlCommand comm = new SqlCommand("select * from patients_doctors", connectionDoc);
+            SqlDataAdapter adp = new SqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+            adp.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
     }
 }

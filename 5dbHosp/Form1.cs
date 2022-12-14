@@ -24,7 +24,7 @@ namespace _5dbHosp
                 return;
             FormDoc formShow = new FormDoc();
             formShow.connectionDoc = conn.conn;
-            formShow.Show();
+            formShow.ShowDialog();
             conn.Close();
         }
     }

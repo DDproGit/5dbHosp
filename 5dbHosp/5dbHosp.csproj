@@ -59,6 +59,12 @@
     <Compile Include="FormDoc.Designer.cs">
       <DependentUpon>FormDoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="InsertDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertDoc.Designer.cs">
+      <DependentUpon>InsertDoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UpdateDoc.cs">
@@ -72,6 +78,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDoc.resx">
       <DependentUpon>FormDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertDoc.resx">
+      <DependentUpon>InsertDoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

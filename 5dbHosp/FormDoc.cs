@@ -38,14 +38,52 @@ namespace _5dbHosp
             frm.ShowDialog();
             idToChange = ((int)frm.idPatient.Value);
             diagTochange = frm.diagnosisPatient.Text;
-            SqlCommand cmd0 = new SqlCommand("update patients_doctors set diagnosis = '" + diagTochange + "' where id = " + idToChange.ToString(), connectionDoc);
-            cmd0.ExecuteNonQuery();
+            try
+            {
+                SqlCommand cmd0 = new SqlCommand("update patients_doctors set diagnosis = '" + diagTochange + "' where id = " + idToChange.ToString(), connectionDoc);
+                cmd0.ExecuteNonQuery();
 
-            SqlCommand comm = new SqlCommand("select * from patients_doctors", connectionDoc);
-            SqlDataAdapter adp = new SqlDataAdapter(comm);
-            DataTable dt = new DataTable();
-            adp.Fill(dt);
-            dataGridView1.DataSource = dt;
+                SqlCommand comm = new SqlCommand("select * from patients_doctors", connectionDoc);
+                SqlDataAdapter adp = new SqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error ! " + er.Message, "Information");
+            }
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InsertDoc frm = new InsertDoc();
+            frm.ShowDialog();
+            string surname, name, patronymic, diagnosis, login;
+            int idDoctor, idRoom;
+            surname = frm.surname.Text;
+            name = frm.name.Text;
+            patronymic = frm.patronymic.Text;
+            diagnosis = frm.diagnosis.Text;
+            login = frm.login.Text;
+            idDoctor=((int)frm.idDoc.Value);
+            idRoom = ((int)frm.idRoom.Value);
+            try
+            {
+                SqlCommand cmd0 = new SqlCommand("INSERT INTO patients (surname, name, patronymic, diagnosis, idDoctor, idRoom, login) VALUES" +
+                    "('" + surname + "', '" + name + "', '" + patronymic + "', '" + diagnosis + "', " + idDoctor.ToString() + ", " + idRoom.ToString() +
+                    ", '" + login + "')", connectionDoc);
+                cmd0.ExecuteNonQuery();
+                SqlCommand comm = new SqlCommand("select * from patients_doctors", connectionDoc);
+                SqlDataAdapter adp = new SqlDataAdapter(comm);
+                DataTable dt = new DataTable();
+                adp.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error ! " + er.Message, "Information");
+            }
         }
     }
 }

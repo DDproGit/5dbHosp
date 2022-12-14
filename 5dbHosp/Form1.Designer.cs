@@ -143,6 +143,7 @@ namespace _5dbHosp
             this.loginPatient.TabIndex = 11;
             this.loginPatient.Text = "Login";
             this.loginPatient.UseVisualStyleBackColor = true;
+            this.loginPatient.Click += new System.EventHandler(this.loginPatient_Click);
             // 
             // Form1
             // 

@@ -27,5 +27,16 @@ namespace _5dbHosp
             formShow.ShowDialog();
             conn.Close();
         }
+
+        private void loginPatient_Click(object sender, EventArgs e)
+        {
+            connection conn = new connection();
+            if (conn.Open(namePatient.Text, passPatient.Text) == false)
+                return;
+            FormPatient formShow = new FormPatient();
+            formShow.connectionPat = conn.conn;
+            formShow.ShowDialog();
+            conn.Close();
+        }
     }
 }

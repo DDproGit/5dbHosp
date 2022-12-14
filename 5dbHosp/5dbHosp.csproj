@@ -59,6 +59,12 @@
     <Compile Include="FormDoc.Designer.cs">
       <DependentUpon>FormDoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPatient.Designer.cs">
+      <DependentUpon>FormPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="InsertDoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDoc.resx">
       <DependentUpon>FormDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPatient.resx">
+      <DependentUpon>FormPatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsertDoc.resx">
       <DependentUpon>InsertDoc.cs</DependentUpon>

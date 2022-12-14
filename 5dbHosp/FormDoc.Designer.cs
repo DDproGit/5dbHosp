@@ -50,6 +50,7 @@ namespace _5dbHosp
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormDoc";
             this.Text = "FormDoc";
+            this.Load += new System.EventHandler(this.FormDoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

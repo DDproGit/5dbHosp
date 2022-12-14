@@ -10,7 +10,7 @@ namespace _5dbHosp
 {
     class connection
     {
-        SqlConnection conn;
+        public SqlConnection conn;
         static string host = "DESKTOP-U257O00";
         static string database = "hospital";
         public bool Open(string userDB, string password)

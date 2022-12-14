@@ -20,9 +20,12 @@ namespace _5dbHosp
         private void loginDoc_Click(object sender, EventArgs e)
         {
             connection conn = new connection();
-            conn.Open(nameDoc.Text, passDoc.Text);
+            if (conn.Open(nameDoc.Text, passDoc.Text) == false)
+                return;
             FormDoc formShow = new FormDoc();
+            formShow.connectionDoc = conn.conn;
             formShow.Show();
+            conn.Close();
         }
     }
 }

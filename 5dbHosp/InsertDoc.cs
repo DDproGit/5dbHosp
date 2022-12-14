@@ -16,5 +16,10 @@ namespace _5dbHosp
         {
             InitializeComponent();
         }
+
+        private void insert_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

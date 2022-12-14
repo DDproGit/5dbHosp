@@ -34,7 +34,7 @@ namespace _5dbHosp
         public string diagTochange;
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UpdateDoc frm = new UpdateDoc(this);
+            UpdateDoc frm = new UpdateDoc();
             frm.ShowDialog();
             idToChange = ((int)frm.idPatient.Value);
             diagTochange = frm.diagnosisPatient.Text;

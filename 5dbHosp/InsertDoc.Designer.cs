@@ -43,6 +43,7 @@ namespace _5dbHosp
             this.login = new System.Windows.Forms.TextBox();
             this.idDoc = new System.Windows.Forms.NumericUpDown();
             this.idRoom = new System.Windows.Forms.NumericUpDown();
+            this.insert = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.idDoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idRoom)).BeginInit();
             this.SuspendLayout();
@@ -159,11 +160,22 @@ namespace _5dbHosp
             this.idRoom.Size = new System.Drawing.Size(120, 20);
             this.idRoom.TabIndex = 13;
             // 
+            // insert
+            // 
+            this.insert.Location = new System.Drawing.Point(248, 286);
+            this.insert.Name = "insert";
+            this.insert.Size = new System.Drawing.Size(75, 23);
+            this.insert.TabIndex = 14;
+            this.insert.Text = "Insert";
+            this.insert.UseVisualStyleBackColor = true;
+            this.insert.Click += new System.EventHandler(this.insert_Click);
+            // 
             // InsertDoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.insert);
             this.Controls.Add(this.idRoom);
             this.Controls.Add(this.idDoc);
             this.Controls.Add(this.login);
@@ -203,5 +215,6 @@ namespace _5dbHosp
         public System.Windows.Forms.TextBox login;
         public System.Windows.Forms.NumericUpDown idDoc;
         public System.Windows.Forms.NumericUpDown idRoom;
+        private System.Windows.Forms.Button insert;
     }
 }

@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace _5dbHosp
 {
-    public partial class UpdateDoc : Form
+    public partial class DeleteAdminP : Form
     {
-        public UpdateDoc()
+        public DeleteAdminP()
         {
             InitializeComponent();
         }
 
-        private void change_Click(object sender, EventArgs e)
+        private void delete_Click(object sender, EventArgs e)
         {
             Close();
         }

@@ -16,5 +16,13 @@ namespace _5dbHosp
         {
             InitializeComponent();
         }
+
+        private void loginDoc_Click(object sender, EventArgs e)
+        {
+            connection conn = new connection();
+            conn.Open(nameDoc.Text, passDoc.Text);
+            FormDoc formShow = new FormDoc();
+            formShow.Show();
+        }
     }
 }
